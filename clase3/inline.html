@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de línea</title>
+</head>
+<style>
+    em{
+        font-style: normal;
+    }
+    kbd{
+        background: rgb(172, 169, 169);
+    }
+    sub{
+        color: red;
+    }
+    sup{
+        color: blue;
+    }
+</style>
+<body>
+    <!-- Elementos de línea 
+        Pueden ir dentro de un elemento de bloque
+        <em>: para enfatizar
+        <strong>: para indicar importancia
+        <time> : indicar tiempo
+        <kbd>: teclas del teclado
+        <sup>: super indice : arriba
+        <sub>: sub indice : abajo
+        <del>: parra decir que algo se cambio
+        
+        4 elementos de linea que no tienen semantica (span, b, u, i)
+        <span>: no significa nada, para separar pedasos de texto y 
+            darle un estilo diferente
+        De estos 4, 3 son para estilo y son los únicos 
+        en html con este proposito (aunque no es necesario)
+        <b>: bold 
+        <u>: subrayado
+        <i>: curiva
+    -->
+    <p>
+        En Español, <em> nadie explica mejor</em> que <strong>EDTean</strong>
+    </p>
+    <p>
+        Para abrir Visual Studio Code en un carpeta
+        preciona <kbd>CTRL</kbd> + <kbd>O</kbd>
+    </p>
+    <p>
+        El símbolo del agua es H<sub>2</sub>O
+    </p>
+    <p>
+        El teorema de pitágoras es a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+    </p>
+    <p>
+        Promocion: <del>30</del>% 15%
+    </p>
+</body>
+</html>
