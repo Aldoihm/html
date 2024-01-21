@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anclas</title>
+</head>
+<body>
+    <h1>Anclas</h1>
+
+    <section id="indice">
+        <h2>Índice</h2><br>
+        <a href="#cap1">Capitulo 1</a>
+        <a href="#cap2">Capitulo 2</a>
+        <a href="#cap3">Capitulo 3</a>
+        <a href="#cap4">Capitulo 4</a>
+        <a href="#cap5">Capitulo 5</a>
+        <a href="#cap6">Capitulo 6</a>
+        <a href="#cap7">Capitulo 7</a>
+        <a href="#cap8">Capitulo 8</a>
+        <a href="index.html">Home</a>
+    </section>
+    <section>
+        <h2>Go (lenguaje de programación)</h2>
+        <img src="img/go.png" alt="">
+    </section>
+    
+    <section id="cap1">
+        <h2>Capitulo 1</h2>
+        <p>
+            Go es un lenguaje de programación concurrente y compilado con tipado estático inspirado en la sintaxis de C, pero con seguridad de memoria y recolección de basura. Ha sido desarrollado por Google y sus diseñadores iniciales fueron Robert Griesemer, Rob Pike y Ken Thompson. Actualmente está disponible en formato binario para los sistemas operativos Windows, GNU/Linux, FreeBSD y Mac OS X, pudiendo también ser instalado en estos y en otros sistemas mediante el código. Go es un lenguaje de programación compilado, concurrente, imperativo, estructurado y orientado a objetos que de momento está disponible para diferentes tipos de sistemas Unix-like, incluidos Linux, FreeBSD, Mac OS X y Plan 9 (puesto que parte del compilador está basado en un trabajo previo sobre el sistema operativo Inferno). Las arquitecturas soportadas son i386, amd64 y ARM.
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+   
+    <section id="cap2">
+        <h2>Capitulo 2</h2>
+        <p>
+            Go es un proyecto de código abierto.
+            Go usa una sintaxis similar a C.
+            Go usa tipado estático.
+            Go es un lenguaje compilado, al igual que C y C++.
+            Provee un recolector de basura, reflexión y algunas otras capacidades de lenguajes de alto nivel.
+            Los binarios de Go tienen la característica de compilación cruzada de manera nativa.
+            Go admite el paradigma de programación orientada a objetos, pero a diferencia de otros lenguajes de programación no dispone de herencia de tipos y tampoco de palabras clave que denoten claramente que soporta este paradigma.
+            En Go, la definición de un tipo ("clase") se realiza por medio de declaraciones separadas (interfaces, types, structs, embedded values).
+            Go permite el uso de delegación (a través de embedded values) y polimorfismo (por medio de interfaces).
+            Go utiliza la concurrencia a través de las gorutinas.
+            Go esta orientado a aprovechar sistemas con múltiples procesadores y procesamiento en red
+            Go admite la tipificación dinámica de datos también conocida como Duck typing.
+            Un struct puede implementar una interfaz de forma automática
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+    
+    <section id="cap3">
+        <h2>Capitulo 3</h2>
+        <p>
+            Go no utiliza excepciones Los creadores del lenguaje han dado varios motivos para que esto sea así. La principal es que añadir una capa de excepciones agrega una complejidad innecesaria al lenguaje y al entorno de ejecución. Por definición las excepciones deberían ser excepcionales, pero al final se acaban usando como controladores del flujo de la aplicación y dejan de tener la finalidad de excepcionalidad. Según los creadores, las excepciones tienen que ser realmente excepcionales y el uso que se le da mayoritariamente no justifica su existencia.
+    
+            Además, resulta en flujos con saltos no obvios. Por ejemplo, una excepción no controlada en una función, que se esperaba no pudiese lanzarla, lleva la ejecución hasta el primer catch que se encuentre. Eso puede dificultar la depuración.
+    
+            Otros lenguajes modernos como Rust también han prescindido de las excepciones por las mismas razones.
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+    
+    <section id="cap4">
+        <h2>Capitulo 4</h2>
+        <p>
+            Aunque su sintaxis es similar, Go difiere mucho de C. Véanse algunos ejemplos.
+    
+            Declaraciones al revés
+            En Go las declaraciones se realizan al revés desde la perspectiva de C (o C++ o Java). La idea principal en C es que se declara una variable como una expresión que denota su tipo. Según los creadores, aunque la idea detrás de la declaración de tipos en C es buena, los tipos y las expresiones gramaticales no se mezclan demasiado bien y el resultado puede ser confuso. Go sin embargo, separa la expresión y la sintaxis de tipo, lo cual simplifica las cosas.
+    
+            Paréntesis
+            En C es necesario utilizar paréntesis al evaluar expresiones dentro de estructuras de control (por ejemplo, en estructuras if-then-else y for-next). En Go es considerado poco "idiomático" utilizar paréntesis en estructuras de control.
+    
+            Punto y coma
+            En Go el uso del carácter punto y coma “;“ al final de una instrucción es opcional.
+    
+            Aritmética de punteros
+            Go no tiene aritmética de punteros. Según los creadores, la razón es la seguridad. Sin aritmética de punteros es posible crear un lenguaje en el que no se puede obtener una dirección ilegal que sea usada de forma incorrecta. La falta de aritmética de punteros simplifica la implementación del recolector de basura. Además, optimizando el compilador y con el hardware actual, un bucle que utiliza los índices de un array puede ser tan eficaz como un bucle que utiliza aritmética de punteros.
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+   
+    <section id="cap5">
+        <h2>Capitulo 5</h2>
+        <p>
+            Para algunos autores, la herencia o las clases no son conceptos esenciales para el paradigma de POO, sino más bien un medio de implementación. Existen desde hace tiempo lenguajes orientados a objetos que no admiten clases, sino que se basan en prototipos, como Javascript o Self. Según declaraciones de Alan Kay, creador de Smalltalk, lo esencial del paradigma es el paso de mensajes
+    
+            Go tiene tipos y métodos, y permite un estilo de programación orientado a objetos que reemplaza el uso de clases por estructuras las cuales admiten construir jerarquías, es decir, no soporta el uso herencia y favorece en su lugar el patrón de composición. En Go, el concepto de “interfaz“ es similar al usado en Java: cualquier objeto (value) que cumpla el contrato especificado por una interfaz (sin necesidad de una declaración explícita) obtiene ese tipo. También existen formas de embeber estructuras dentro de otras estructuras para obtener algo análogo a las subclases. Los métodos de Go son más generales que los de C++ o Java, y se incluyen en las estructuras declarando funciones asociadas a estas. Pueden ser definidos para cualquier tipo de datos; no solo para los registros. Por su parte las interfaces de Go a diferencia de lenguajes como Java, son de tipo implícito, es decir que se considera que la interfaz ha sido implementada cuando una estructura implementa sus métodos aun cuando esto no se especifique.
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+
+    <section id="cap6">
+        <h2>Capitulo 6</h2>
+        <p>
+            Algunas aplicaciones notables de código abierto escritas en Go son:
+    
+            Caddy, un servidor web HTTP/2 de código abierto con capacidad HTTPS automática
+            CockroachDB, una base de datos SQL de código abierto, con capacidad de supervivencia, fuertemente consistente y escalable
+            Consul, un software para el descubrimiento de servicios basado en DNS y que proporciona almacenamiento distribuido de valores clave, segmentación y configuración.
+            Docker, un conjunto de herramientas para desplegar contenedores Linux
+            EdgeX, una plataforma de código abierto independiente de los proveedores, alojada por la Fundación Linux, que proporciona un marco común para la informática de borde del IoT industrial
+            Hugo, un generador de sitios estáticos
+            InfluxDB, una base de datos de código abierto específica para manejar datos de series temporales con requisitos de alta disponibilidad y alto rendimiento
+            InterPlanetary File System, un protocolo hipermedia peer-to-peer con direcciones de contenido
+            Juju, una herramienta de orquestación de servicios de Canonical, empaquetadores de Ubuntu Linux
+            Sistema de gestión de contenedores Kubernetes
+            Golang Pagoda framework
+            lnd, una implementación de la red Bitcoin Lightning
+            Mattermost, un sistema de chat en equipo
+            NATS Messaging, un sistema de mensajería de código abierto que se basa en los principios de rendimiento, escalabilidad y facilidad de uso.
+            OpenShift, una plataforma de computación en la nube como servicio de Red Hat
+            Rclone, un programa de línea de comandos para gestionar archivos en el almacenamiento en la nube y otros servicios de alta latencia
+            Snappy, un gestor de paquetes para Ubuntu Touch desarrollado por Canonical
+            Syncthing, una aplicación cliente/servidor de sincronización de archivos de código abierto
+            Terraform, una herramienta de aprovisionamiento de infraestructura de nube múltiple de código abierto de HashiCorp
+            TiDB, una base de datos distribuida HTAP de código abierto compatible con el protocolo MySQL de PingCAP
+            Vitess, una base de datos de código abierto, distribuida y compatible con MySQL, de YouTube, que ahora está alojada en la Cloud Native Computing Foundation
+            arctil, herramienta de evaluación de la seguridad web
+        </p>
+        <a href="#indice">Ir al índice</a>
+    </section>
+
+    <section id="cap7">
+        <h2>Capitulo 7</h2>
+        <img src="img/go.png" alt="">
+        <p>
+            El clásico programa Hola mundo en Go es similar a como se haría en C++. Con este típico ejemplo podemos apreciar que en cuanto a sintaxis son muy similares:
+        </p>
+        <pre>
+        <code>
+            package main
+
+            import "fmt"
+
+            func main() {
+            fmt.Println("Hola, mundo.")
+            }
+
+        </code>
+        </pre>
+        <a href="#indice">Ir al índice</a>
+    </section>
+
+    <section id="cap8">
+        <h2>Capitulo 8</h2>
+        <p>
+            Un programa para una aplicación web.
+        </p>
+        <pre>
+        <code>
+            import (
+            "fmt"
+            "log"
+            "net/http"    
+            )
+    
+            func holaFunc(w http.ResponseWriter, r *http.Request) {
+                fmt.Fprintf(w,"Hola mundo!")
+            }
+    
+            func main() {
+                http.HandleFunc("/",holaFunc)
+                log.Fatal(http.ListenAndServe(":8080", nil))
+            }
+        </code>
+        </pre>
+        <a href="#indice">Ir al índice</a>
+    </section>
+</body>
+</html>
