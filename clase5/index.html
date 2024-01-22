@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Embebido</title>
+</head>
+<body>
+    <!-- 
+        Contenido embebido
+
+        IMAGENES
+        1.- Vectoriales. Son matemáticos y no tienen resolución. (logos, texto)
+        2.- Mapa de bits. Son muchos cuadrados de colores (pixeles) que juntos forman una imágen.
+     -->
+
+     <!-- FORMATO DE IMAGENES  
+        svg: formato vectorial para web (solo reconoce este la web)
+        los png pesan mas que lo jpeg
+        gif : para videos cortos de 10 segundos
+        webp: combinan jpeg y png con menos peso (mejor rendimiento)
+        avif: mejor compresión que webp
+        
+        Recomendación para comprimir imágenes:
+        tinypng: https://tinypng.com/
+
+        heic: formato de iphone, no es recomendable para web por lo pesado
+
+        Los poster de edteam pesan aprox 23kb sus post. Con formato png
+
+        Recomiendan webp. Todos los navegadores lo soportan
+        buscar un convertidor de imagenes a webp
+        
+        Etiquetas para imganes <img>
+    -->
+    <!-- No se recomienda importar las imagenes de otros proyectos -->
+    <!--     
+        <img src="https://motor.elpais.com/wp-content/uploads/2019/09/0506d357-bugatti-chiron-super-sport-300-2-1440x740.jpg" alt="">
+        <img src="img/Macao,_China.jpg" alt="Aqui se pone la descripción"> 
+    -->
+    <h1>Imágenes</h1>
+    <h2>Páginas para descargar imágenes sin derecho de autor</h2>
+    <a href="https://unsplash.com/es">Unsplash</a> <br>
+    <a href="https://www.pexels.com/es-es/">Pexels</a> <br>
+    <a href="https://www.flaticon.com/">Flaticon: para imágenes vectoriales</a> <br>
+    <a href="https://www.adobe.com/mx/products/firefly.html">Adobe Firefly: para creaer imagens con ia</a> <br>
+    <a href="https://www.bing.com/images/create">Bing image creator: imagenes para crear imagenes con ia</a>
+
+    <!--
+        Picture
+        Etiqueta para agregar varias imágenes a la vez
+        Esto es por si tienes varios navegadores que usaran tu app y puede ser que un navegador no visualice tu imagen
+        Pero solo se muestra una imagen, si no funciona la primera opcion se va con la segunda y asi sucesivamente
+     -->
+
+     <h2>Picture</h2>
+     <picture>
+        <source srcset="img/imagen_pagina_sotec.jpeg" width="200">
+        <source srcset="img/Macao,_China.jpg">
+        <img src="opcion3" alt="">
+     </picture>
+
+    <!-- figure
+        Muestra cualquier elemento que rompa el flujo del codigo,
+        puedo hablar de programacion y al momento de poner un codigo, lo puedo meter dentro de figure
+        puede ser usado, en image, video, tabla, lo que sea pero se usa mas en imagenes
+        figurecaption es una etiqueta para colocar la descripcion de lo que pusiste dentro de figure
+    -->
+    <figure>
+        <img src="img/imagen_pagina_sotec.jpeg" alt="" width="200">
+        <figcaption>Descripcion de la imagen</figcaption>
+    </figure>
+
+    <!-- Audio y video
+        <video>
+        Se recomienda mp4 para la web
+
+        controls: va con el atributo para que ponga las herramientas para controlar el video, siempre va esta imagen 
+        poster: para poner una imagen en tu video antes de que le demos reproducir
+        Asegurar que el tamaño del poster y del video, sea del mismo tamaño
+        
+        Es lo mismo con el audio que con el video
+        <audio>
+
+        NOTA: RECOMIENDA NO USAR ESTE METODO, MEJOR SUBIR EL VIDEO A YOUTUBE Y DESPUES PONERLO EN TU WEB
+    -->
+    <h2>Audio y Video</h2>
+    <video src="media/VID_0001.MP4" width="500" controls poster="img/osciloscopio.jpg"></video>
+
+    <!-- 
+        Etiqueta para embeber
+        <iframe>
+            puedes copias el codigo que te arroja youtube
+            se puede hacer lo mismo con:
+            Google forms
+            instagram
+            maps
+     -->
+    <h2>CONTENIDO EMBEBIDO EN MI EJEMPLO DE YOUTUBE</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0WdSn1H4bws?si=ruATun3OoBbHREPO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>Google Maps</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.515770367093!2d-97.3604160238845!3d19.81811802825447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85daeb346cbbf935%3A0x141b91108ae0f9ff!2sSotec%20M%C3%B3vil!5e0!3m2!1ses-419!2smx!4v1705965003538!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h2>Instagram</h2>
+    <img src="img/Instagram.jpeg" alt="">
+
+</body>
+</html>
