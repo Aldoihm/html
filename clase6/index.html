@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid blue;
+            padding: .25em .5em;
+        }
+        tfoot{
+            background: green;
+        }
+        thead{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--     
+        <table></table>: Encierra toda la tabla
+        <tr></tr>: Para las filas (Table Row)
+        <td></td>: Division de cada fila (Table Data)
+                No existen las columndas en html
+     -->
+     <h1>Tablas</h1>
+     <table>
+        <tr>
+            <td></td>
+            <td>LUNES</td>
+            <td>MARTES</td>
+            <td>MIERCOLES</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Final</td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+     </table>
+        <!-- 
+            Estructura completa de una tabla
+            <table>
+                <caption></caption> : Descripcion de la tabla 
+                <thead> : Cabecera de la tabla (Table Head)
+                    <tr>
+                        <th></th>: En lugar de poner un td se pone th de (Table Head)  
+                    </tr>
+                </thead>
+                <tbody>: El cuerpo de la tabla (Table Body)
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>: El pie de la página (Table Foot)
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        -->
+      <h2>Horario de estudio</h2>
+      <table>
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Html</td>
+                <td>Css</td>
+                <td>Photoshop</td>
+                <td>Java Script</td>
+                <td>Go</td>
+            </tr>
+            <tr>
+                <td>Vue</td>
+                <td>Taiwland</td>
+                <td>Figma</td>
+                <td>Postgres</td>
+                <td>Git</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>10</td>
+            </tr>
+        </tfoot>
+      </table>
+      <!-- Agrupar celdas 
+            Se usan los atributos
+            
+            colspan = n
+            rowspan = n
+
+            Donde n es la cantidad de columnas o de filas que se van a combinar 
+        -->
+      <h2>Agrupar celdas</h2>
+      <table>
+        <tr>
+            <td></td>
+            <td>LUNES</td>
+            <td>MARTES</td>
+            <td>MIERCOLES</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="3">Final</td>
+            <td>5</td>
+        </tr>
+     </table>
+
+     <h2>Agrupas Celdas parte 2</h2>
+
+     <h2>Horario de estudio</h2>
+     <table>
+       <thead>
+           <tr>
+               <th>Lunes</th>
+               <th>Martes</th>
+               <th>Miercoles</th>
+               <th>Jueves</th>
+               <th>Viernes</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td rowspan="2">Html</td>
+               <td rowspan="2">Css</td>
+               <td rowspan="2">Photoshop</td>
+               <td>Java Script</td>
+               <td>Go</td>
+           </tr>
+           <tr>
+               <td>Vue</td>
+               <td>Git</td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td colspan="4">Total</td>
+               <td>10</td>
+           </tr>
+       </tfoot>
+     </table>
+    <!-- 
+        Colgroup: Sirve para separar por columnas y no por filas como está por default
+        <Colgroup>
+            <col>: se pone un col, por cada columna que exite en mi tabla
+            <col span = "n"> : Se pone para no colocar un col por cada columna
+        </Colgroup>
+        
+    -->
+     <h2>Colgroup</h2>
+     <table>
+        <colgroup>
+            <col style="background: yellowgreen;">
+            <col span="2" style="background: goldenrod ;">
+            <col style="background: silver;">
+        </colgroup>
+        <tr>
+            <td></td>
+            <td>LUNES</td>
+            <td>MARTES</td>
+            <td>MIERCOLES</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Final</td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+     </table>
+</body>
+</html>
