@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        div, fieldset{
+            margin-bottom: 10px;
+        }
+        .types{
+            display: block;
+            margin-bottom: 10px;
+        }
+        fieldset{
+            margin-top: 10px;
+            border-radius: 1em;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <!--     
+    <form action=""></form> 
+    Se manda a una url
+    <input type="text"> = es el predeterminado
+        Si solo ponemos <input>, el navegador entiende que es el type text
+    -->
+    <!-- 
+    Estructura básica de un formulario
+    
+    <form action="recibido.html">
+        <div>
+            <input placeholder="Usuario">
+        </div>
+        <div>
+            <input placeholder="Contraseña" type="password">
+        </div>
+        <button>Ingresar</button>
+    </form>
+
+    Atributo value: se usa para dar un valor predeterminado
+
+    2 MODOS PARA ENVIAR FORMULARIO
+        1.- Button
+        2.- <input type "submit">
+    
+    AGRUPAR CAMPOS
+        <fieldset></fieldset> : Agrupa los campos
+        <legend></legend> : Nombra ese grupo de campos
+
+    -->
+     <form action="recibido.html">
+        <fieldset>
+            <legend>Tus datos</legend>
+            <div>
+                <label for="username">Usuario</label>
+                <input id="username" placeholder="Usuario">
+            </div>
+            <div>
+                <label>
+                    Contraseña
+                    <input placeholder="Contraseña" type="password">
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tus gustos</legend>
+            <div>
+                <label for="music">Música favorita</label>
+                <input id="music" placeholder="Música favorita">
+            </div>
+            <div>
+                <label>
+                    Comida favorita
+                    <input placeholder="Comida Favorita" >
+                </label>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Ingresar">
+    </form>
+
+    <!-- 
+        Tipos de imputs
+     -->
+    <h2>Tipos de Input</h2>
+    <form action="recibido.html">
+        <label class="types">
+            Text
+            <input type="text">
+        </label>
+        <label class="types">
+            Number
+            <input type="number">
+        </label>
+        <label class="types">
+            Date
+            <input type="date">
+        </label>
+        <label class="types">
+            Email
+            <input type="email">
+        </label>
+        <label class="types">
+            Tel
+            <input type="tel">
+        </label>
+        <label class="types">
+            Color
+            <input type="color">
+        </label>
+        <label class="types">
+            Password
+            <input type="password">
+        </label>
+        <label class="types">
+            Range <!-- step: saltos de valor-->
+            <input type="range" min="0" max="100" step="10">
+        </label>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- 
+        Inputs especiales
+        checkbox
+        radio
+        select
+     -->
+    <form action="recibido.html">
+        <fieldset>
+            <legend>Checkbox</legend>
+            <label class="types">
+                Html
+                <input type="checkbox" name="html">
+            </label>
+            <label class="types">
+                Css
+                <input type="checkbox" name="css" checked>
+            </label>
+            <label class="types">
+                Go
+                <input type="checkbox" name="go">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Radio</legend>
+            <label class="types">
+                <input type="radio" name="sexo" value="hombre" required>
+                Hombre
+                <input type="radio" name="sexo" value="mujer">
+                Mujer
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Select</legend>
+            <select name="pais" id="">
+                <optgroup label="Norte América">
+                    <option value="mexico">México</option>
+                    <option value="estados_unidos">Estados Unidos</option>
+                    <option value="canada" selected>Canada</option>
+                </optgroup>
+                <optgroup label="Sudamérica">
+                    <option value="peru">Perú</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="colombia">Colombia</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <label for="comment">Textarea</label>
+        <div>
+            <textarea name="" id="comment" cols="30" rows="5"></textarea>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Atributos especiales
+        checked : seleccione un checkbox
+        required: campo obligatorio
+        selectec: igual que checked pero en el select
+        readonly: input de solo lectura
+        autocomplete = "on": es solo para el form
+            on: Si el navegador tiene los datos, el formulario se llena solo
+    -->
+</body>
+</html>
