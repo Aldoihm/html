@@ -1,0 +1,60 @@
+:root{
+    --colorMenu:#374A8F;
+    --colorMenuSelected: #2961AB;
+}
+header{
+    padding: 1em 0;
+}
+.menu{
+    text-transform: uppercase;
+}
+
+.menu a{
+    padding: .4em .8em;
+    font-size: .85em;
+    margin-left: .2em;
+    border-radius: .25em;
+}
+
+.menu a:hover{
+    background: var(--colorMenu);
+    color: white;
+}
+
+.menu a.selected{
+    background: var(--colorMenuSelected);
+    color: white;
+}
+
+
+.title{
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.subtitle{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.social img{
+    width: 2em;
+    margin-right: .5em;
+}
+
+.logo{
+    width: 6em;
+}
+
+main p{
+    text-align: justify;
+}
